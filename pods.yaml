@@ -25,3 +25,16 @@ spec:
     - name: webapp
       image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5
 
+---
+# ActiveMQ Pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: queue
+  labels:
+    app: queue
+spec:
+  containers:
+    - name: queue
+      image: richardchesterwood/k8s-fleetman-queue:release1
+

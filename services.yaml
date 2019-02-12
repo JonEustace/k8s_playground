@@ -18,3 +18,18 @@ spec:
       nodePort: 30080
   #clusterIP is internal to the cluster, NodePort is external
   type: NodePort
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name:
+    queue
+spec:
+  selector:
+    app: queue
+  ports:
+    - name: http
+      port: 8161
+      nodePort: 30010
+  type: NodePort
