@@ -9,8 +9,6 @@ spec:
   # or maybe external users to connect to (eg browser)
   selector:
     app: webapp
-    # This maps to the label in the pod file
-    release: "0-5"
   ports:
     - name: http
       port: 80
